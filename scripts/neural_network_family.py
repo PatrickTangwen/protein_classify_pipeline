@@ -171,7 +171,7 @@ class ProteinDataset(Dataset):
                 ]
                 
                 # Update domain scores (normalized)
-                domain_scores[domain_idx] = np.log1p(domain[3])  # Log transform scores
+                domain_scores[domain_idx] = -np.log10(max(domain[3], 1e-300))  # Smaller e-values get larger scores
                 
                 # Add to ordered domains
                 ordered_domains.append(domain_idx)

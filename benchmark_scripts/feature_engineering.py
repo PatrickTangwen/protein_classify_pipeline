@@ -47,7 +47,7 @@ def build_features(df, level='subfamily', max_domains=50):
                 domain_idx = domain_vocab[domain_acc]
                 domain_presence[domain_idx] = 1
                 domain_positions[domain_idx] = [start_pos / row['Length'], end_pos / row['Length']]
-                domain_scores[domain_idx] = np.log1p(score)
+                domain_scores[domain_idx] = -np.log10(max(score, 1e-300))
                 ordered_domains.append(domain_idx)
 
         # Process separators
