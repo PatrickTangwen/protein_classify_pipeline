@@ -1,0 +1,115 @@
+Training started at: 2025-06-19 22:14:21
+==================================================
+Epoch [1/100] - Time: 1.09s
+  Train Loss: 6.4826, Train Acc: 2.43%
+  Val Loss: 5.8049, Val Acc: 30.36%
+Epoch [2/100] - Time: 0.51s
+  Train Loss: 5.4190, Train Acc: 20.29%
+  Val Loss: 4.7122, Val Acc: 54.05%
+Epoch [3/100] - Time: 0.51s
+  Train Loss: 4.2458, Train Acc: 40.77%
+  Val Loss: 3.5738, Val Acc: 63.70%
+Epoch [4/100] - Time: 0.52s
+  Train Loss: 3.1935, Train Acc: 54.86%
+  Val Loss: 2.6710, Val Acc: 74.31%
+Epoch [5/100] - Time: 0.51s
+  Train Loss: 2.3606, Train Acc: 66.65%
+  Val Loss: 1.9459, Val Acc: 79.44%
+Epoch [6/100] - Time: 0.52s
+  Train Loss: 1.7724, Train Acc: 74.92%
+  Val Loss: 1.4325, Val Acc: 83.44%
+Epoch [7/100] - Time: 0.52s
+  Train Loss: 1.3222, Train Acc: 81.26%
+  Val Loss: 1.1022, Val Acc: 85.45%
+Epoch [8/100] - Time: 0.52s
+  Train Loss: 1.0043, Train Acc: 86.22%
+  Val Loss: 0.8900, Val Acc: 87.23%
+Epoch [9/100] - Time: 0.51s
+  Train Loss: 0.7885, Train Acc: 88.62%
+  Val Loss: 0.7596, Val Acc: 89.68%
+Epoch [10/100] - Time: 0.52s
+  Train Loss: 0.6057, Train Acc: 90.98%
+  Val Loss: 0.6435, Val Acc: 91.61%
+Epoch [11/100] - Time: 0.53s
+  Train Loss: 0.4938, Train Acc: 92.43%
+  Val Loss: 0.5740, Val Acc: 92.35%
+Epoch [12/100] - Time: 0.53s
+  Train Loss: 0.3997, Train Acc: 93.72%
+  Val Loss: 0.5195, Val Acc: 93.02%
+Epoch [13/100] - Time: 0.54s
+  Train Loss: 0.3304, Train Acc: 94.42%
+  Val Loss: 0.4859, Val Acc: 93.24%
+Epoch [14/100] - Time: 0.55s
+  Train Loss: 0.2698, Train Acc: 95.81%
+  Val Loss: 0.4631, Val Acc: 93.32%
+Epoch [15/100] - Time: 0.54s
+  Train Loss: 0.2351, Train Acc: 96.33%
+  Val Loss: 0.4485, Val Acc: 93.54%
+Epoch [16/100] - Time: 0.55s
+  Train Loss: 0.1950, Train Acc: 97.16%
+  Val Loss: 0.4492, Val Acc: 93.24%
+Epoch [17/100] - Time: 0.56s
+  Train Loss: 0.1777, Train Acc: 97.29%
+  Val Loss: 0.4535, Val Acc: 93.47%
+Epoch [18/100] - Time: 0.56s
+  Train Loss: 0.1542, Train Acc: 97.57%
+  Val Loss: 0.4517, Val Acc: 93.39%
+Epoch [19/100] - Time: 0.55s
+  Train Loss: 0.1398, Train Acc: 97.75%
+  Val Loss: 0.4609, Val Acc: 93.54%
+Epoch [20/100] - Time: 0.57s
+  Train Loss: 0.1219, Train Acc: 97.98%
+  Val Loss: 0.4543, Val Acc: 93.32%
+Epoch [21/100] - Time: 0.57s
+  Train Loss: 0.1173, Train Acc: 97.80%
+  Val Loss: 0.4563, Val Acc: 93.54%
+Epoch [22/100] - Time: 0.59s
+  Train Loss: 0.1069, Train Acc: 97.91%
+  Val Loss: 0.4622, Val Acc: 93.62%
+Epoch [23/100] - Time: 0.59s
+  Train Loss: 0.0935, Train Acc: 98.19%
+  Val Loss: 0.4592, Val Acc: 93.24%
+Epoch [24/100] - Time: 0.54s
+  Train Loss: 0.0873, Train Acc: 98.37%
+  Val Loss: 0.4611, Val Acc: 93.47%
+Epoch [25/100] - Time: 0.54s
+  Train Loss: 0.0823, Train Acc: 98.32%
+  Val Loss: 0.4580, Val Acc: 93.62%
+Epoch [26/100] - Time: 0.55s
+  Train Loss: 0.0849, Train Acc: 98.35%
+  Val Loss: 0.4581, Val Acc: 93.24%
+Epoch [27/100] - Time: 0.54s
+  Train Loss: 0.0741, Train Acc: 98.37%
+  Val Loss: 0.4678, Val Acc: 93.24%
+Epoch [28/100] - Time: 0.55s
+  Train Loss: 0.0709, Train Acc: 98.68%
+  Val Loss: 0.4592, Val Acc: 93.47%
+Epoch [29/100] - Time: 0.55s
+  Train Loss: 0.0720, Train Acc: 98.53%
+  Val Loss: 0.4590, Val Acc: 93.54%
+Epoch [30/100] - Time: 0.53s
+  Train Loss: 0.0684, Train Acc: 98.55%
+  Val Loss: 0.4576, Val Acc: 93.47%
+Epoch [31/100] - Time: 0.54s
+  Train Loss: 0.0621, Train Acc: 98.40%
+  Val Loss: 0.4574, Val Acc: 93.17%
+Epoch [32/100] - Time: 0.53s
+  Train Loss: 0.0604, Train Acc: 98.73%
+  Val Loss: 0.4636, Val Acc: 93.17%
+Epoch [33/100] - Time: 0.55s
+  Train Loss: 0.0608, Train Acc: 98.60%
+  Val Loss: 0.4648, Val Acc: 93.17%
+Epoch [34/100] - Time: 0.53s
+  Train Loss: 0.0606, Train Acc: 98.60%
+  Val Loss: 0.4643, Val Acc: 93.24%
+Epoch [35/100] - Time: 0.53s
+  Train Loss: 0.0607, Train Acc: 98.42%
+  Val Loss: 0.4637, Val Acc: 93.17%
+Epoch [36/100] - Time: 0.53s
+  Train Loss: 0.0556, Train Acc: 98.66%
+  Val Loss: 0.4670, Val Acc: 93.32%
+Epoch [37/100] - Time: 0.55s
+  Train Loss: 0.0602, Train Acc: 98.53%
+  Val Loss: 0.4676, Val Acc: 93.47%
+
+Early stopping at epoch 37.
