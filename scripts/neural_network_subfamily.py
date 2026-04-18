@@ -20,6 +20,25 @@ import sys
 from datetime import datetime
 from tabulate import tabulate
 
+RANDOM_SEED = 42
+
+
+def set_global_seed(seed):
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+    if hasattr(torch.backends, "cudnn"):
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+    try:
+        torch.use_deterministic_algorithms(True, warn_only=True)
+    except Exception:
+        pass
+
 
 # Create model_results directory outside scripts folder if it doesn't exist
 results_dir = os.path.join('..', 'neural_network','model_results_subfamily')
@@ -98,8 +117,11 @@ class Logger:
 logger = Logger(log_file)
 sys.stdout = logger
 
+set_global_seed(RANDOM_SEED)
+
 print(f"Training started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print(f"Results will be saved to: {results_dir}")
+print(f"Using global random seed: {RANDOM_SEED}")
 print("="*80)
 
 # Load data
@@ -630,7 +652,12 @@ class_weights = class_weights / class_weights.sum()  # normalize
 class_weights = torch.FloatTensor(class_weights)
 
 # Create data loaders
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+train_loader = DataLoader(
+    train_dataset,
+    batch_size=32,
+    shuffle=True,
+    generator=torch.Generator().manual_seed(RANDOM_SEED),
+)
 val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 
 # Initialize model, loss function, and optimizer

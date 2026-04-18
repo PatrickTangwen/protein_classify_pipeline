@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
+import config
 try:
     import xgboost as xgb
     XGBOOST_AVAILABLE = True
@@ -60,11 +61,11 @@ class ImprovedProteinClassifier(nn.Module):
 # Dictionary of models to be benchmarked
 MODELS = {
     'random_forest': {
-        'model': RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1),
+        'model': RandomForestClassifier(n_estimators=100, random_state=config.RANDOM_SEED, n_jobs=-1),
         'type': 'sklearn'
     },
     'svm': {
-        'model': SVC(kernel='rbf', probability=True, random_state=42),
+        'model': SVC(kernel='rbf', probability=True, random_state=config.RANDOM_SEED),
         'type': 'sklearn'
     },
     # 'neural_network': {
@@ -72,11 +73,11 @@ MODELS = {
     #     'type': 'pytorch'
     # },
     'logistic_regression': {
-        'model': LogisticRegression(random_state=42, max_iter=1000, n_jobs=-1),
+        'model': LogisticRegression(random_state=config.RANDOM_SEED, max_iter=1000, n_jobs=-1),
         'type': 'sklearn'
     },
     'extra_trees': {
-        'model': ExtraTreesClassifier(n_estimators=100, random_state=42, n_jobs=-1),
+        'model': ExtraTreesClassifier(n_estimators=100, random_state=config.RANDOM_SEED, n_jobs=-1),
         'type': 'sklearn'
     },
     'knn': {
@@ -101,11 +102,15 @@ MODELS = {
 if XGBOOST_AVAILABLE:
     MODELS['xgboost'] = {
         'model': xgb.XGBClassifier(
-            random_state=42,
-            n_estimators=100,
-            max_depth=6,
+            random_state=config.RANDOM_SEED,
+            n_estimators=50,
+            max_depth=4,
             learning_rate=0.1,
+            subsample=0.8,
+            colsample_bytree=0.8,
+            reg_lambda=1.0,
             n_jobs=-1,
+            tree_method='hist',
             eval_metric='logloss'
         ),
         'type': 'sklearn'

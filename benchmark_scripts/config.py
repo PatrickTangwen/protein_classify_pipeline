@@ -9,6 +9,9 @@ RESULTS_DIR = os.path.join(BASE_DIR, 'benchmark_results')
 PROTEIN_DATA_PATH = os.path.join(DATA_SOURCE_DIR, 'data_new.csv')
 SUPERFAMILY_MAP_PATH = os.path.join(DATA_SOURCE_DIR, 'fam2supefamily.csv')
 
+# --- Reproducibility ---
+RANDOM_SEED = 42
+
 # --- Model & Feature Configuration ---
 MAX_DOMAINS = 50
 

@@ -14,6 +14,7 @@ from models import MODELS
 from training import train_and_evaluate_model
 from evaluation import get_predictions, evaluate_model_detailed, save_reports, generate_roc_curve
 from generate_benchmark_plot import generate_benchmark_plots
+from seed_utils import set_global_seed
 
 def main():
     parser = argparse.ArgumentParser(description="Run benchmarks for protein classification.")
@@ -27,6 +28,9 @@ def main():
     print("="*80)
     print(f"AutoML Protein Classification - {args.level.capitalize()} Level")
     print("="*80)
+
+    set_global_seed(config.RANDOM_SEED)
+    print(f"Using global random seed: {config.RANDOM_SEED}")
     
     # --- 1. Load Data ---
     print("\n=== Step 1: Loading Data ===")

@@ -46,10 +46,16 @@ def train_pytorch_model(model_class, X_train, y_train, X_val, y_val, output_dir)
 
     start_time = time.time()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    train_generator = torch.Generator().manual_seed(config.RANDOM_SEED)
     
     train_dataset = TensorDataset(torch.FloatTensor(X_train), torch.LongTensor(y_train))
     val_dataset = TensorDataset(torch.FloatTensor(X_val), torch.LongTensor(y_val))
-    train_loader = DataLoader(train_dataset, batch_size=config.PYTORCH_BATCH_SIZE, shuffle=True)
+    train_loader = DataLoader(
+        train_dataset,
+        batch_size=config.PYTORCH_BATCH_SIZE,
+        shuffle=True,
+        generator=train_generator,
+    )
     val_loader = DataLoader(val_dataset, batch_size=config.PYTORCH_BATCH_SIZE, shuffle=False)
     
     input_dim = X_train.shape[1]
